@@ -8,11 +8,12 @@ import "./assets/css/index.css";
 import pinia from "./stores";
 // 路由
 import router from "./router";
-
+// 自定义指令
+import directive from '@/directive'
 //icon组件 ---全局组件
 import "./assets/icon/iconfont";
 import icon from "@/components/icon.vue";
 
 const app = createApp(App);
-
-app.use(pinia).use(router).mount("#app");
+app.component('Icon',icon)
+app.use(pinia).use(router).use(directive).mount("#app");

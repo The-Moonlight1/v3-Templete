@@ -9,7 +9,6 @@
       cursor: pointer ? 'pointer' : 'default',
     }"
   >
-    <use :xlink:href="iconName"></use>
     <use :xlink:href="`#icon-${name}`"></use>
   </svg>
 </template>
@@ -33,6 +32,7 @@ const props = defineProps({
   },
 });
 //两种方法都可以
+{/* <use :xlink:href="iconName"></use> */}
 // const iconName = computed(name => `#icon-${props.name}`)
 </script>
 
