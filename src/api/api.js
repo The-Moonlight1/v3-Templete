@@ -6,7 +6,8 @@
  *    User.login()
  * 
  * 第二种就是引用该模块，
- * 然后 再 使用方法，大体上差不多，建议用上一个
+ * 然后 再 使用方法，大体上差不多，建议用第一种
+ * 这个模块就是 将所有的 请求 都放到同一个变量中，方便调用
  */
 const api = import.meta.globEager("./*Api.js");
 Object.keys(api).forEach((module) => {
